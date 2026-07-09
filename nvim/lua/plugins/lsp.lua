@@ -1,6 +1,32 @@
 return {
     "neovim/nvim-lspconfig",
+    dependencies = {
+        "hrsh7th/cmp-nvim-lsp",
+    },
     config = function()
+        local lspconfig = require("lspconfig")
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+        vim.diagnostic.config({
+            severity_sort = true,
+            signs = true,
+            underline = true,
+            virtual_text = {
+                spacing = 4,
+                source = "if_many",
+            },
+            float = {
+                border = "rounded",
+                source = "always",
+            },
+        })
+
+        lspconfig.util.default_config.capabilities = vim.tbl_deep_extend(
+            "force",
+            lspconfig.util.default_config.capabilities or {},
+            capabilities
+        )
+
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspKeymaps", { clear = true }),
             callback = function(args)
