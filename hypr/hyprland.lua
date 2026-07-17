@@ -384,3 +384,7 @@ hl.on("hyprland.start", function()
 		workspace = 1,
 	})
 end)
+
+hl.bind(mainMod .. "+ B", function()
+	hl.exec_cmd("google-chrome-stable")
+end)
