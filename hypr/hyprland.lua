@@ -293,10 +293,18 @@ hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "special:AI"
 
 hl.bind(mainMod .. " + D", hl.dsp.workspace.toggle_special("chat-gpt-web"))
 hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "special:chat-gpt-web" }))
-local chat_gpt_url = " https://chatgpt.com/"
+local chat_gpt_url = "https://chatgpt.com/"
 hl.workspace_rule({
     workspace = "special:chat-gpt-web",
     on_created_empty = browser .. " " .. chat_gpt_url,
+})
+
+hl.bind(mainMod .. " + G", hl.dsp.workspace.toggle_special("github"))
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.move({ workspace = "specail:github" }))
+local github_url = "http://github.com/"
+hl.workspace_rule({
+    workspace = "special:github",
+    on_created_empty = browser .. " " .. github_url,
 })
 
 -- Scroll through existing workspaces with mainMod + scroll
