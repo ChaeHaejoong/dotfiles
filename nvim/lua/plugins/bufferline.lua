@@ -14,8 +14,8 @@ return {
 		{ "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", desc = "Close other buffers" },
 		{ "<leader>bl", "<cmd>BufferLineCloseLeft<cr>", desc = "Close buffers to the left" },
 		{ "<leader>br", "<cmd>BufferLineCloseRight<cr>", desc = "Close buffers to the right" },
-		{ "<A-h>", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer left" },
-		{ "<A-l>", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer right" },
+		{ "<leader>bH", "<cmd>BufferLineMovePrev<cr>", desc = "Move buffer left" },
+		{ "<leader>bL", "<cmd>BufferLineMoveNext<cr>", desc = "Move buffer right" },
 	},
 	opts = {
 		options = {
