@@ -53,11 +53,11 @@ return {
                     vim.tbl_extend("force", opts, { desc = "Open diagnostic float" }))
                 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist,
                     vim.tbl_extend("force", opts, { desc = "Populate location list" }))
-                vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder,
+                vim.keymap.set("n", "<leader>la", vim.lsp.buf.add_workspace_folder,
                     vim.tbl_extend("force", opts, { desc = "Add workspace folder" }))
-                vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder,
+                vim.keymap.set("n", "<leader>lr", vim.lsp.buf.remove_workspace_folder,
                     vim.tbl_extend("force", opts, { desc = "Remove workspace folder" }))
-                vim.keymap.set("n", "<leader>wl", function()
+                vim.keymap.set("n", "<leader>ll", function()
                     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
                 end, vim.tbl_extend("force", opts, { desc = "List workspace folders" }))
             end,
