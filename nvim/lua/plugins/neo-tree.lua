@@ -13,6 +13,18 @@ return {
         },
     },
     opts = {
+        enable_git_status = true,
+        git_status_async = true,
+        enable_refresh_on_write = true,
+        filesystem = {
+            -- Watch the filesystem directly so changes made outside Neovim
+            -- (for example, by shell commands or git) appear automatically.
+            use_libuv_file_watcher = true,
+            follow_current_file = {
+                enabled = true,
+                leave_dirs_open = false,
+            },
+        },
         default_component_configs = {
             indent = {
                 expander_collapsed = "",
