@@ -15,20 +15,20 @@ vim.opt.updatetime = 250
 vim.opt.clipboard = "unnamedplus"
 
 if vim.fn.executable("fcitx5-remote") == 1 then
-    local im_group = vim.api.nvim_create_augroup("ForceEnglishInput", { clear = true })
+	local im_group = vim.api.nvim_create_augroup("ForceEnglishInput", { clear = true })
 
-    local function force_english_input()
-        vim.fn.system({ "fcitx5-remote", "-c" })
-    end
+	local function force_english_input()
+		vim.fn.system({ "fcitx5-remote", "-c" })
+	end
 
-    vim.api.nvim_create_autocmd({ "InsertEnter", "InsertLeave" }, {
-        group = im_group,
-        callback = force_english_input,
-    })
+	vim.api.nvim_create_autocmd({ "InsertEnter", "InsertLeave" }, {
+		group = im_group,
+		callback = force_english_input,
+	})
 end
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+	pattern = { "javascript", "javascriptreact", "typescript", "typescriptreact", "c", "cpp"},
 	callback = function()
 		vim.bo.tabstop = 2
 		vim.bo.shiftwidth = 2
