@@ -17,6 +17,10 @@
       "tray"
     ],
 
+    "hyprland/workspaces": {
+      "show-special": true,
+      "special-visible-only": false
+    },
     /* "mpd": {
             "format": "{stateicon} {consumeicon}{randomicon}{repeaticon}{singleicon}{artist} - {album} - {title} ({elapsedtime:%m:%s}/{totaltime:%m:%s}) ⸨{songposition}|{queuelength}⸩ {volume}% ",
             "format-disconnected": "disconnected ",
