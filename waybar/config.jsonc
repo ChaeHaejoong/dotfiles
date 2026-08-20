@@ -8,18 +8,11 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": [
-      "pulseaudio",
-      "network",
-      "cpu",
-      "memory",
-      "battery",
-      "tray"
-    ],
+    "modules-right": ["pulseaudio", "network", "cpu", "battery", "tray"],
 
     "hyprland/workspaces": {
       "show-special": true,
-      "special-visible-only": false
+      "special-visible-only": false,
     },
     /* "mpd": {
             "format": "{stateicon} {consumeicon}{randomicon}{repeaticon}{singleicon}{artist} - {album} - {title} ({elapsedtime:%m:%s}/{totaltime:%m:%s}) ⸨{songposition}|{queuelength}⸩ {volume}% ",
@@ -50,20 +43,17 @@
 
     "clock": {
       "format": "{:%y-%m-%d %a | %H:%M}",
-      "tooltip-format": "<big>{:%y %b}</big>\n<tt><small>{calendar}</small></tt>"
+      "tooltip-format": "<big>{:%y %b}</big>\n<tt><small>{calendar}</small></tt>",
     },
     "cpu": {
       "format": "{usage}% ",
-      "tooltip": false
-    },
-    "memory": {
-      "format": "{}% "
+      "tooltip": false,
     },
     "battery": {
       "states": {
         // "good": 95,
         "warning": 30,
-        "critical": 15
+        "critical": 15,
       },
       "format": "{capacity}% {icon}",
       "format-full": "{capacity}% {icon}",
@@ -72,7 +62,7 @@
       "format-alt": "{time} {icon}",
       // "format-good": "", // An empty format will hide the module
       // "format-full": "",
-      "format-icons": ["", "", "", "", ""]
+      "format-icons": ["", "", "", "", ""],
     },
     "network": {
       // "interface": "wlp2*", // (Optional) To force the use of this interface
@@ -81,7 +71,7 @@
       "tooltip-format": "{ifname} via {gwaddr} ",
       "format-linked": "{ifname} (No IP) ",
       "format-disconnected": "Disconnected ⚠",
-      "format-alt": "{ifname}: {ipaddr}/{cidr}"
+      "format-alt": "{ifname}: {ipaddr}/{cidr}",
     },
     "pulseaudio": {
       // "scroll-step": 1, // %, can be a float
@@ -98,11 +88,11 @@
         "phone": "",
         "portable": "",
         "car": "",
-        "default": ["", "", ""]
+        "default": ["", "", ""],
       },
-      "on-click": "pavucontrol"
-    }
-  }
+      "on-click": "pavucontrol",
+    },
+  },
   /*  {
     "name": "bottom",
     "position": "bottom",
