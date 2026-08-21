@@ -92,7 +92,7 @@
       },
       "on-click": "pavucontrol",
     },
-  },
+  }
   /*  {
     "name": "bottom",
     "position": "bottom",
