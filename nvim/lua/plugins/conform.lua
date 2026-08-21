@@ -17,6 +17,7 @@ return {
             lua = { "stylua" },
             c = { "clang-format" },
             cpp = { "clang-format" },
+            go = { "gofmt" },
         },
         format_on_save = function(bufnr)
             local filetype = vim.bo[bufnr].filetype
@@ -25,7 +26,7 @@ return {
                 or filetype == "json" or filetype == "jsonc"
                 or filetype == "css" or filetype == "scss"
                 or filetype == "html" or filetype == "markdown"
-                or filetype == "c" or filetype == "cpp" then
+                or filetype == "c" or filetype == "cpp" or filetype == "go" then
                 return {
                     timeout_ms = 2000,
                     lsp_format = "fallback",

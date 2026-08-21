@@ -6,6 +6,7 @@ return {
         local parser_languages = {
             "c",
             "cpp",
+            "go",
             "css",
             "html",
             "javascript",
@@ -21,6 +22,7 @@ return {
         local filetypes = {
             "c",
             "cpp",
+            "go",
             "css",
             "html",
             "javascript",
