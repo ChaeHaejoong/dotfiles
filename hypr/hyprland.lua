@@ -313,6 +313,14 @@ hl.workspace_rule({
 	on_created_empty = browser .. " " .. github_url,
 })
 
+hl.bind(mainMod .. " + F", hl.dsp.workspace.toggle_special("DMU"))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.move({ workspace = "specail:DMU" }))
+local dmu_url = "https://www.dongyang.ac.kr/"
+hl.workspace_rule({
+	workspace = "special:DMU",
+	on_created_empty = browser .. " " .. dmu_url,
+})
+
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
