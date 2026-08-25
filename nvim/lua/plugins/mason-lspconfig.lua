@@ -5,6 +5,7 @@ return {
             "lua_ls",
             "pyright",
             "ts_ls",
+            "gopls",
         },
         automatic_enable = true,
     },
