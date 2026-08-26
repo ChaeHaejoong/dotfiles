@@ -8,7 +8,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "battery", "tray"],
+    "modules-right": ["pulseaudio", "network", "cpu", "battery"],
 
     "hyprland/workspaces": {
       "show-special": true,
