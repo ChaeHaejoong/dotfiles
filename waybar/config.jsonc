@@ -8,7 +8,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "cpu", "battery"],
+    "modules-right": ["pulseaudio", "network", "custom/system", "battery"],
 
     "hyprland/workspaces": {
       "show-special": true,
@@ -45,8 +45,10 @@
       "format": "{:%y-%m-%d %a | %H:%M}",
       "tooltip-format": "<big>{:%y %b}</big>\n<tt><small>{calendar}</small></tt>",
     },
-    "cpu": {
-      "format": "{usage}% ",
+    "custom/system": {
+      "exec": "/home/chaehaejoong/.config/waybar/system-usage.sh",
+      "interval": 2,
+      "return-type": "json",
       "tooltip": false,
     },
     "battery": {
