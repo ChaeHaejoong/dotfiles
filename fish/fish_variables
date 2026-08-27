@@ -1,5 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export ANDROID_HOME:/home/chaehaejoong/Android/Sdk
 SETUVAR --export ELECTRON_OZONE_PLATFORM_HINT:wayland
+SETUVAR --export JAVA_HOME:/usr/lib/jvm/java\x2d17\x2dopenjdk
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:
+SETUVAR fish_user_paths:/home/chaehaejoong/Android/Sdk/cmdline\x2dtools/bin\x1e/home/chaehaejoong/Android/Sdk/platform\x2dtools
