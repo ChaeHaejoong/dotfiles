@@ -11,6 +11,7 @@ return {
 		{ "<leader>bp", "<cmd>BufferLinePick<cr>", desc = "Pick buffer" },
 		{ "<leader>bP", "<cmd>BufferLinePickClose<cr>", desc = "Pick buffer to close" },
 		{ "<leader>bc", "<cmd>bdelete<cr>", desc = "Close current buffer" },
+		{ "<leader>bx", "<cmd>%bdelete<cr>", desc = "Close all buffers" },
 		{ "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", desc = "Close other buffers" },
 		{ "<leader>bl", "<cmd>BufferLineCloseLeft<cr>", desc = "Close buffers to the left" },
 		{ "<leader>br", "<cmd>BufferLineCloseRight<cr>", desc = "Close buffers to the right" },
