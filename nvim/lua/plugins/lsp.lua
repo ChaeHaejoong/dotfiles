@@ -27,6 +27,15 @@ return {
             capabilities
         )
 
+        vim.lsp.config("arduino_language_server", {
+            cmd = {
+                "arduino-language-server",
+                "-cli", vim.fn.exepath("arduino-cli"),
+                "-clangd", vim.fn.stdpath("data") .. "/mason/bin/clangd",
+                "-cli-config", vim.fn.expand("~/.arduino15/arduino-cli.yaml"),
+            },
+        })
+
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspKeymaps", { clear = true }),
             callback = function(args)
@@ -62,5 +71,6 @@ return {
                 end, vim.tbl_extend("force", opts, { desc = "List workspace folders" }))
             end,
         })
+
     end,
 }
