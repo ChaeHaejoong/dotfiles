@@ -5,6 +5,7 @@ vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.hidden = true
+vim.opt.autoread = true
 vim.opt.shell = "fish"
 vim.opt.ttimeoutlen = 10
 vim.opt.number = true
@@ -13,6 +14,15 @@ vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 vim.opt.updatetime = 250
 vim.opt.clipboard = "unnamedplus"
+
+local external_change_group = vim.api.nvim_create_augroup("CheckExternalFileChanges", { clear = true })
+
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+	group = external_change_group,
+	callback = function()
+		vim.cmd.checktime()
+	end,
+})
 
 if vim.fn.executable("fcitx5-remote") == 1 then
 	local im_group = vim.api.nvim_create_augroup("ForceEnglishInput", { clear = true })
