@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+DIR="$HOME/Pictures/screenshots"
+mkdir -p "$DIR"
+
+grim -g "$(slurp)" "$DIR/$(date +%Y-%m-%d_%H-%M-%S).png"
