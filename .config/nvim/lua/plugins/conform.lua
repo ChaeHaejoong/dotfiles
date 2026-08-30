@@ -4,6 +4,8 @@ return {
     cmd = { "ConformInfo" },
     opts = {
         formatters_by_ft = {
+            bash = { "shfmt" },
+            sh = { "shfmt" },
             javascript = { "prettier" },
             javascriptreact = { "prettier" },
             typescript = { "prettier" },
@@ -26,7 +28,8 @@ return {
                 or filetype == "json" or filetype == "jsonc"
                 or filetype == "css" or filetype == "scss"
                 or filetype == "html" or filetype == "markdown"
-                or filetype == "c" or filetype == "cpp" or filetype == "go" then
+                or filetype == "c" or filetype == "cpp" or filetype == "go"
+                or filetype == "bash" or filetype == "sh" then
                 return {
                     timeout_ms = 2000,
                     lsp_format = "fallback",
