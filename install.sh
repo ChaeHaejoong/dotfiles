@@ -30,3 +30,5 @@ for dir in "${configDirs[@]}"; do
         ln -s "$src" "$dst"
     fi
 done
+
+ln -s "$DOTFILES/.local/bin" "$HOME/.local/bin"
