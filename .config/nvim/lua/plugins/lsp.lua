@@ -36,6 +36,21 @@ return {
             },
         })
 
+        vim.lsp.config("yamlls", {
+            settings = {
+                yaml = {
+                    schemas = {
+                        ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = {
+                            "**/docker-compose*.yml",
+                            "**/docker-compose*.yaml",
+                            "**/compose*.yml",
+                            "**/compose*.yaml",
+                        },
+                    },
+                },
+            },
+        })
+
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspKeymaps", { clear = true }),
             callback = function(args)

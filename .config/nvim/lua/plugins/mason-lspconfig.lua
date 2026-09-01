@@ -7,6 +7,7 @@ return {
             "pyright",
             "ts_ls",
             "gopls",
+            "yamlls",
         },
         automatic_enable = true,
     },
