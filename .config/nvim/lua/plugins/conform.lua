@@ -21,6 +21,8 @@ return {
 			lua = { "stylua" },
 			c = { "clang-format" },
 			cpp = { "clang-format" },
+			arduino = { "clang-format" },
+			ino = { "clang-format" },
 			go = { "gofmt" },
 		},
 		format_on_save = function(bufnr)
@@ -41,6 +43,8 @@ return {
 				or filetype == "yaml"
 				or filetype == "c"
 				or filetype == "cpp"
+				or filetype == "arduino"
+				or filetype == "ino"
 				or filetype == "go"
 				or filetype == "bash"
 				or filetype == "sh"

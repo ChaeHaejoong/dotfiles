@@ -34,11 +34,15 @@ return {
             "typescriptreact",
             "tsx",
             "vim",
+            "arduino",
         }
 
         require("nvim-treesitter").setup({
             install_dir = vim.fn.stdpath("data") .. "/site",
         })
+
+        -- Arduino sketches use C++ syntax, so reuse the installed C++ parser.
+        vim.treesitter.language.register("cpp", "arduino")
 
         require("nvim-treesitter").install(parser_languages)
 
