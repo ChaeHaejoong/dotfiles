@@ -5,4 +5,4 @@ SETUVAR --export ELECTRON_OZONE_PLATFORM_HINT:wayland
 SETUVAR --export JAVA_HOME:/usr/lib/jvm/java\x2d17\x2dopenjdk
 SETUVAR __fish_initialized:4300
 SETUVAR fish_greeting:
-SETUVAR fish_user_paths:/home/chaehaejoong/\x2elocal/bin\x1e/home/chaehaejoong/Android/Sdk/cmdline\x2dtools/bin\x1e/home/chaehaejoong/Android/Sdk/platform\x2dtools
+SETUVAR fish_user_paths:/home/chaehaejoong/go/bin\x1e/home/chaehaejoong/\x2elocal/bin\x1e/home/chaehaejoong/Android/Sdk/cmdline\x2dtools/bin\x1e/home/chaehaejoong/Android/Sdk/platform\x2dtools
