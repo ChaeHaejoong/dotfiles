@@ -2,6 +2,15 @@ return {
 	"stevearc/conform.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	cmd = { "ConformInfo" },
+	keys = {
+		{
+			"<leader>f",
+			function()
+				require("conform").format({ async = true, lsp_format = "fallback" })
+			end,
+			desc = "Format buffer",
+		},
+	},
 	opts = {
 		formatters_by_ft = {
 			bash = { "shfmt" },
@@ -55,5 +64,11 @@ return {
 				}
 			end
 		end,
+		formatters = {
+			prettier = {
+				-- Mason installs Prettier outside the shell's PATH.
+				command = vim.fn.stdpath("data") .. "/mason/bin/prettier",
+			},
+		},
 	},
 }

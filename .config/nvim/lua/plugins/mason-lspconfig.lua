@@ -8,6 +8,7 @@ return {
             "ts_ls",
             "gopls",
             "yamlls",
+            "jsonls",
         },
         automatic_enable = true,
     },
