@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 DOTFILES="$HOME/dotfiles"
+CONFIG="$DOTFILES/.config"
 
 configDirs=(
     assets
@@ -14,8 +15,13 @@ configDirs=(
 )
 
 for dir in "${configDirs[@]}"; do
-    src="$DOTFILES/$dir"
+    src="$CONFIG/$dir"
     dst="$HOME/.config/$dir"
+
+    if [ ! -e "$src" ]; then
+        echo "오류: 설정 소스가 없습니다: $src" >&2
+        exit 1
+    fi
 
     if [ -e "$dst" ] || [ -L "$dst" ]; then
         read -r -p "$dst 이미 있는데 덮어쓸래? [y/n] " answer
@@ -31,4 +37,9 @@ for dir in "${configDirs[@]}"; do
     fi
 done
 
-ln -s "$DOTFILES/.local/bin" "$HOME/.local/bin"
+if [ -e "$DOTFILES/.local/bin" ]; then
+    ln -s "$DOTFILES/.local/bin" "$HOME/.local/bin"
+else
+    echo "오류: 실행 파일 소스가 없습니다: $DOTFILES/.local/bin" >&2
+    exit 1
+fi
