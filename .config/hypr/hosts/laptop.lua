@@ -16,3 +16,9 @@ hl.workspace_rule({
 	default = true,
 	persistent = true,
 })
+
+hl.config({
+	xwayland = {
+		force_zero_scaling = true,
+	},
+})
