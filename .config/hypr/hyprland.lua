@@ -12,7 +12,7 @@ end
 ---- MY PROGRAMS ----
 ---------------------
 local terminal = "kitty"
-local fileManager = "dolphin"
+local fileManager = "kitty -e yazi"
 local menu = "hyprlauncher"
 local browser = "google-chrome-stable --new-window"
 local music = "/opt/google/chrome/google-chrome --profile-directory=Default --app-id=cinhimbnkkaeohfgghhklpknlkffjgod"
