@@ -27,6 +27,19 @@ return {
             capabilities
         )
 
+        vim.lsp.config("lua_ls", {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { "vim" },
+                    },
+                    workspace = {
+                        library = vim.api.nvim_get_runtime_file("", true),
+                    },
+                },
+            },
+        })
+
         vim.lsp.config("arduino_language_server", {
             cmd = {
                 "arduino-language-server",
@@ -86,6 +99,5 @@ return {
                 end, vim.tbl_extend("force", opts, { desc = "List workspace folders" }))
             end,
         })
-
     end,
 }
