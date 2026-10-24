@@ -8,7 +8,7 @@ return {
     },
     config = function()
         require("tabout").setup({
-            tabkey = "",
+            tabkey = "<Tab>",
             backwards_tabkey = "",
             act_as_tab = true,
             act_as_shift_tab = false,
