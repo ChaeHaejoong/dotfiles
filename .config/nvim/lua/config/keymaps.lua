@@ -1,7 +1,7 @@
 local keymap = vim.keymap.set
 
 -- File save
-keymap("n", "<leader>w", "<cmd>write<cr>", { desc = "Save file", silent = true, nowait = true })
+keymap("n", "<leader>s", "<cmd>write<cr>", { desc = "Save file", silent = true, nowait = true })
 
 -- Window navigation
 keymap("n", "<C-h>", "<C-w>h")
