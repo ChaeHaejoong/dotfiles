@@ -10,7 +10,7 @@ return {
 	},
 	keys = {
 		{
-			"<leader>sg",
+			"<leader>fg",
 			function()
 				require("telescope").extensions.live_grep_args.live_grep_args()
 			end,
