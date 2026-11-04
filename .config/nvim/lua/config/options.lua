@@ -1,6 +1,8 @@
 vim.g.mapleader = ","
 vim.g.maplocalleader = ","
 
+vim.g.arduino_recommended_style = 0
+
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
