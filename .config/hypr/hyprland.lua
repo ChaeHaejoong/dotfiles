@@ -46,6 +46,10 @@ hl.env("INPUT_METHOD", "fcitx")
 ---- LOOK AND FEEL ----
 -----------------------
 hl.config({
+    render = {
+        cm_auto_hdr = 0,
+    },
+
     general = {
         gaps_in = 5,
         gaps_out = 20,
